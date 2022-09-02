@@ -16,7 +16,16 @@
       var n1 = Number (window.prompt('Digite um número'))
       var n2 = Number (window.prompt('Digite um número'))
       result = n1 + n2
-      window.alert ('Deu certo, confia: ' + result + (' hehe')) //Concatenação
+      window.alert (`Deu certo, confia: ${String(result)} + (' hehe`)) //Concatenação
+
+      //formatando strings em Java Script:
+      //'Eu estou aprendendo s'    > Não usa interpolação
+      //'Eu estou aprendendo' + s  > Usa concatenação
+      //`Eu estou aprendendo ${s}` > Usa Template string (Melhor método)
+
+      // s.length        > Quantos caracteress a string tem
+      // s.toUpperCase() > tudo para 'MAIÚSCULAS'
+      // s.toLowerCase() > tudo para 'minúsculas'
     </script>
 </body>
 </html>
