@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medidas</title>
+</head>
+<style> 
+    body {
+         font-family: sans-serif;
+         font-size: 20px;
+     }
+     button {
+         width: 150px;
+         height: 80px;
+         font-size: 20px;
+     }
+     p {
+        font-family: sans-serif;
+         font-size: 20px;
+     }
+
+     
+ </style>
+<body>
+    <h1>Conversor de medidas</h1>
+    <button onclick="conversor()">Conversor</button>
+
+    <script>
+        //chamando o botao conversor, caso alguém clique
+
+        function conversor() {
+            
+            //Declarando variaveis
+            var distancia_m = Number.parseFloat(window.prompt('Digite uma distância em Metros(m)'))
+            var distancia_km = distancia_m / 1000
+            var distancia_hm = distancia_m / 100
+            var distancia_dam = distancia_m / 10
+            var distancia_dm = distancia_m * 10
+            var distancia_cm = distancia_m * 100
+            var distancia_mm = distancia_m * 1000
+
+            //exibindo no html
+            document.write(`<h2>A Distância de ${distancia_m} metros, corresponde a...</h2>`)
+            document.write(`<p>${distancia_km} quilômetros (km) </p>`)
+            document.write(`<p>${distancia_mm} hectômetros (hm) </p>`)
+            document.write(`<p>${distancia_dam} decâmetros (dam) </p>`)
+            document.write(`<p>${distancia_dm} decímetros (dm) </p>`)
+            document.write(`<p>${distancia_cm} centímetros (cm) </p>`)
+            document.write(`<p>${distancia_mm} milímetros (mm) </p>`)  
+        }
+    </script>
+</body>
+</html>

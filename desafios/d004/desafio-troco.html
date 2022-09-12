@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Troco</title>
+</head>
+<style> 
+   body {
+        font-family: sans-serif;
+        font-size: 20px;
+    }
+    button {
+        width: 150px;
+        height: 80px;
+        font-size: 20px;
+    }
+</style>
+<body>
+    <h1>Calculando troco</h1>
+    <button onclick="botao1()">Comprar produto</button>
+    <script>
+        //Função chamando o click do botão o html
+        function botao1() {
+
+            //Declaração de variaveis
+            const nome_produto = window.prompt('Qual o nome do produto que você está comprando?')
+            var valor_produto = Number(window.prompt(`Qual o valor do ${nome_produto} que você está comprando?`))
+            var valor_pago = Number(window.prompt(`Qual valor que você deu para comprar ${nome_produto}?`))
+            var troco = valor_pago - valor_produto
+
+            //exibindo na tela o resultado
+            window.alert(`Você comprou o ${nome_produto} que custou ${valor_produto.toLocaleString('pt-BR', { style: 'currency', currency:'BRL'})}.\nDeu ${valor_pago.toLocaleString('pt-BR', { style: 'currency', currency:'BRL'})} em dinheiro e vai receber ${troco.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})} de troco.\nVolte Sempre. `)
+        }
+    </script>
+</body>
+</html>

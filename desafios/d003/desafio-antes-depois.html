@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Antes e Depois</title>
+</head>
+<style>
+    body {
+        font-family: sans-serif;
+        font-size: 20px;
+    }
+    button {
+        width: 150px;
+        height: 80px;
+        font-size: 20px;
+    }
+</style>
+<body>
+    <h1>Antes e Depois</h1>
+    <button onclick="botao1()">Antecessor e Sucessor</button>
+    <script>
+        function botao1 () {
+            var num = Number(window.prompt('Digite um número: '))
+            var before = num - 1
+            var after = num + 1
+            window.alert(`Antes de ${num}, temos o número ${before} \n Depois de ${num}, temos o número ${after}`)
+        }
+    </script>
+</body>
+</html>
